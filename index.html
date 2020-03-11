@@ -28,7 +28,6 @@
             >Fullstack Web Developer
             <div class="header-buttons">
               <a href="#projects">Projects</a>
-              <a href="#contact">Contact</a>
               <a
                 href="https://docs.google.com/document/d/1C3lKCGi62SZ2PJLVJD19U1DjwMUldJoHj-EKLHU4ocE/export?format=pdf"
                 ><i class="fa fa-download"></i> CV</a
@@ -210,7 +209,7 @@
     </div>
 
     <!-- Contact -->
-    <div id="contact" class="main">
+    <!-- <div id="contact" class="main">
       <h1>Contact Me</h1>
       <form id="contact-form">
         <div class="input">
@@ -243,24 +242,54 @@
           <button class="contact-btn" type="submit">Submit</button>
         </div>
       </form>
+    </div> -->
+    <div
+      id="contact"
+      class="main"
+      style="padding-left: 1rem; padding-right: 1rem;"
+    >
+      <h1>Contact Me</h1>
+      <div class="wrapper animated bounceInLeft">
+        <div class="contact">
+          <form>
+            <p>
+              <input type="text" name="first-name" placeholder="firstname" />
+            </p>
+            <p>
+              <input type="text" name="last-name" placeholder="Last Name" />
+            </p>
+            <p>
+              <input type="email" name="email" placeholder="Email" />
+            </p>
+            <p>
+              <input type="text" name="phone" placeholder="Phone" />
+            </p>
+            <p class="full">
+              <textarea
+                name="message"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+            </p>
+            <p class="full">
+              <button>Submit</button>
+            </p>
+          </form>
+        </div>
+        <div class="company-info">
+          <h2 style="padding-bottom: 20px;">Acme Web Design</h2>
+          <ul>
+            <li><i class="contact-icon fa fa-road"></i> 44 Something st</li>
+            <li><i class="contact-icon fa fa-phone"></i> (555) 555-5555</li>
+            <li><i class="contact-icon fa fa-envelope"></i> test@acme.test</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <div id="footer">
       <p>&copy Glenn Ludszuweit</p>
     </div>
-
-    <script>
-      var prevScrollpos = window.pageYOffset;
-      window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById("nav").style.top = "0";
-        } else {
-          document.getElementById("nav").style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-      };
-    </script>
   </body>
 </html>
