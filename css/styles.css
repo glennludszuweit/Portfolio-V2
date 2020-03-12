@@ -318,6 +318,10 @@ section .title span a::after {
 .contact-icon {
   padding-right: 10px;
 }
+.contact-social-icon {
+  padding-top: 20px;
+  padding-right: 10px;
+}
 @media (min-width: 700px) {
   .wrapper {
     display: grid;
