@@ -117,6 +117,41 @@ section .title span a::after {
 }
 
 /* About */
+.about-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 56rem) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 40rem) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-img img {
+    width: 275px;
+  }
+  .about-info {
+    line-height: 1em;
+    letter-spacing: 1px;
+  }
+}
+.about-img,
+.about-info {
+  padding: 20px;
+  color: #f5f5f5;
+  line-height: 1.6em;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+}
+.about-img img {
+  width: 300px;
+}
 
 /* Projects */
 .gallery-nav {
@@ -222,6 +257,7 @@ section .title span a::after {
 .company-info {
   background: #1a2022;
   color: #f5f5f5;
+  text-align: center;
 }
 
 .company-info h3,
