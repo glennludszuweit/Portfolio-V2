@@ -318,6 +318,10 @@ section .title span a::after {
 .contact-icon {
   padding-right: 10px;
 }
+.social {
+  padding-top: 50px;
+  font-size: 32px;
+}
 .contact-social-icon {
   padding-top: 20px;
   padding-right: 10px;
@@ -332,11 +336,11 @@ section .title span a::after {
     padding: 2em;
   }
 
-  .company-info h3,
+  /* .company-info h3,
   .company-info ul,
   .brand {
     text-align: left;
-  }
+  } */
 }
 
 /* Footer */
