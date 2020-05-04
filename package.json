@@ -4,7 +4,8 @@
   "description": "Glenn Ludszuweit Portfolio",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/glennludszuweit/Portfolio-V1/issues"
   },
-  "homepage": "https://github.com/glennludszuweit/Portfolio-V1#readme"
+  "homepage": "https://github.com/glennludszuweit/Portfolio-V1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }
