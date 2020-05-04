@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Glenn Ludszuweit Portfolio",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glennludszuweit/Portfolio-V1.git"
+  },
+  "author": "Glenn Ludszuweit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glennludszuweit/Portfolio-V1/issues"
+  },
+  "homepage": "https://github.com/glennludszuweit/Portfolio-V1#readme"
+}
