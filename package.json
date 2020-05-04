@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/glennludszuweit/Portfolio-V1#readme",
   "dependencies": {
-    "ejs": "^3.1.2",
     "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
     "nodemailer": "^6.4.6"
   },
   "devDependencies": {
