@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.post("/send", (req, res) => {
+app.post("/", (req, res) => {
   console.log(req.body);
   const output = `
         <p>You have a new message.</p>
@@ -62,7 +62,7 @@ app.post("/send", (req, res) => {
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-    res.redirect("/#contact", { msg: "Email Sent!" });
+    res.render("", { msg: "Email Sent!" });
   });
 });
 

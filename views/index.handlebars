@@ -1,7 +1,13 @@
 <!-- Header -->
 <div id="content">
+  <div style="
+  color: aliceblue; 
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;">{{msg}}</div>
   <section>
-    <div class="title">
+    <div class=" title">
       <span>Glenn Ludszuweit</span><span>Fullstack Web Developer
         <div class="header-buttons">
           <a href="#projects">Projects</a>
@@ -179,24 +185,23 @@
 <!-- Contact -->
 <div id="contact" class="main" style="padding-left: 1rem; padding-right: 1rem;">
   <h1>Contact Me</h1>
-
   <div class="wrapper animated bounceInLeft">
     <div class="contact">
-      <form action="send" method="POST">
+      <form action="/" method="POST">
         <p>
-          <input type="text" name="name" placeholder="Name" />
+          <input type="text" name="name" placeholder="Name" required />
         </p>
         <p>
-          <input type="text" name="company" placeholder="Company" />
+          <input type="text" name="company" placeholder="Company" required />
         </p>
         <p>
-          <input type="email" name="email" placeholder="Email" />
+          <input type="email" name="email" placeholder="Email" required />
         </p>
         <p>
-          <input type="text" name="mobile" placeholder="Mobile" />
+          <input type="text" name="mobile" placeholder="Mobile" required />
         </p>
         <p class="full">
-          <textarea name="message" rows="10" placeholder="Message"></textarea>
+          <textarea name="message" rows="10" placeholder="Message" required></textarea>
         </p>
         <p class="full">
           <button type="submit">Submit</button>
