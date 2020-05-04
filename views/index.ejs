@@ -250,20 +250,21 @@
       style="padding-left: 1rem; padding-right: 1rem;"
     >
       <h1>Contact Me</h1>
+
       <div class="wrapper animated bounceInLeft">
         <div class="contact">
-          <form>
+          <form action="send" method="POST">
             <p>
-              <input type="text" name="first-name" placeholder="firstname" />
+              <input type="text" name="name" placeholder="Name" />
             </p>
             <p>
-              <input type="text" name="last-name" placeholder="Last Name" />
+              <input type="text" name="company" placeholder="Company" />
             </p>
             <p>
               <input type="email" name="email" placeholder="Email" />
             </p>
             <p>
-              <input type="text" name="phone" placeholder="Phone" />
+              <input type="text" name="mobile" placeholder="Mobile" />
             </p>
             <p class="full">
               <textarea
@@ -273,7 +274,7 @@
               ></textarea>
             </p>
             <p class="full">
-              <button>Submit</button>
+              <button type="submit">Submit</button>
             </p>
           </form>
         </div>
