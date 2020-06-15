@@ -1,15 +1,15 @@
-const express = require("express");
-const path = require("path");
-const nodemailer = require("nodemailer");
-const exphbs = require("express-handlebars");
+const express = require('express');
+const path = require('path');
+const nodemailer = require('nodemailer');
+const exphbs = require('express-handlebars');
 
 const app = express();
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 9001;
 
-app.engine("handlebars", exphbs());
-app.set("view engine", "handlebars");
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
   express.urlencoded({
@@ -18,11 +18,11 @@ app.use(
 );
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get('/', (req, res) => {
+  res.render('index');
 });
 
-app.post("/", (req, res) => {
+app.post('/', (req, res) => {
   console.log(req.body);
   const output = `
         <p>You have a new message.</p>
@@ -38,20 +38,20 @@ app.post("/", (req, res) => {
       `;
 
   let transporter = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
+    host: 'smtp.mailtrap.io',
     port: 587,
     secure: false,
     auth: {
-      user: "d262be34a8992c", // generated ethereal user
-      pass: "cc5cf3e73fc3cb", // generated ethereal password
+      user: 'd262be34a8992c', // generated ethereal user
+      pass: 'cc5cf3e73fc3cb', // generated ethereal password
     },
   });
 
   let mailOptions = {
     from: '"glennludszuweit.de" <d262be34a8992c>', // sender address
-    to: "glenn.ludszuweit@gmail.com", // list of receivers
+    to: 'glenn.ludszuweit@gmail.com', // list of receivers
     subject: `Profile Message from ${req.body.email}`, // Subject line
-    text: "", // plain text body
+    text: '', // plain text body
     html: output, // html body
   };
 
@@ -59,10 +59,10 @@ app.post("/", (req, res) => {
     if (error) {
       return console.log(error);
     }
-    console.log("Message sent: %s", info.messageId);
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    console.log('Message sent: %s', info.messageId);
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-    res.render("", { msg: "Email Sent!" });
+    res.render('', { msg: 'Email Sent!' });
   });
 });
 
