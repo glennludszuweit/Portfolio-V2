@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400, 700);
-/*!
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400, 700'); /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -47,7 +46,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 article,
 aside,
@@ -540,6 +539,9 @@ pre code {
 }
 .col,
 .col-1,
+.col-10,
+.col-11,
+.col-12,
 .col-2,
 .col-3,
 .col-4,
@@ -548,12 +550,12 @@ pre code {
 .col-7,
 .col-8,
 .col-9,
-.col-10,
-.col-11,
-.col-12,
 .col-auto,
 .col-lg,
 .col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
 .col-lg-2,
 .col-lg-3,
 .col-lg-4,
@@ -562,12 +564,12 @@ pre code {
 .col-lg-7,
 .col-lg-8,
 .col-lg-9,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
 .col-lg-auto,
 .col-md,
 .col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
 .col-md-2,
 .col-md-3,
 .col-md-4,
@@ -576,12 +578,12 @@ pre code {
 .col-md-7,
 .col-md-8,
 .col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12,
 .col-md-auto,
 .col-sm,
 .col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
 .col-sm-2,
 .col-sm-3,
 .col-sm-4,
@@ -590,12 +592,12 @@ pre code {
 .col-sm-7,
 .col-sm-8,
 .col-sm-9,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
 .col-sm-auto,
 .col-xl,
 .col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
 .col-xl-2,
 .col-xl-3,
 .col-xl-4,
@@ -604,9 +606,6 @@ pre code {
 .col-xl-7,
 .col-xl-8,
 .col-xl-9,
-.col-xl-10,
-.col-xl-11,
-.col-xl-12,
 .col-xl-auto {
   position: relative;
   width: 100%;
@@ -2954,10 +2953,10 @@ input[type='submit'].btn-block {
 .btn-group-toggle > .btn-group > .btn {
   margin-bottom: 0;
 }
-.btn-group-toggle > .btn-group > .btn input[type='checkbox'],
-.btn-group-toggle > .btn-group > .btn input[type='radio'],
 .btn-group-toggle > .btn input[type='checkbox'],
-.btn-group-toggle > .btn input[type='radio'] {
+.btn-group-toggle > .btn input[type='radio'],
+.btn-group-toggle > .btn-group > .btn input[type='checkbox'],
+.btn-group-toggle > .btn-group > .btn input[type='radio'] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3377,7 +3376,7 @@ input[type='submit'].btn-block {
   appearance: none;
 }
 .custom-range:focus {
-  outline: none;
+  outline: 0;
 }
 .custom-range:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -8833,7 +8832,7 @@ section {
 }
 .skill-logo {
   height: 150px;
-  margin: 2rem;
+  margin: 0 2rem;
 }
 @media (max-width: 56.25em) {
   .skill-logo {
@@ -8846,12 +8845,10 @@ section {
     height: 60px;
     margin: 1rem;
   }
-}
-/* @media (max-width: 37.5em) {
-  #about .about-wrapper {
-    padding-bottom: 5rem;
+  .skill-logo-container {
+    padding-bottom: 0;
   }
-} */
+}
 #about .about-wrapper__image {
   display: flex;
   height: 100%;
@@ -8902,13 +8899,13 @@ section {
     display: inline;
     margin: 0;
     padding: 0;
-    background: transparent;
+    background: 0 0;
     font-style: normal;
   }
 }
 input,
 textarea {
-  background: transparent;
+  background: 0 0;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -8919,18 +8916,14 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  outline: none;
+  outline: 0;
 }
-/* input:hover,
-textarea:hover {
-  transform: scale(1.05);
-  overflow: hidden;
-} */
 .contact-form {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  width: auto;
 }
 .contact-form textarea {
   grid-column: span 2;
@@ -8941,6 +8934,18 @@ textarea:hover {
   justify-self: center;
   margin-top: 1rem;
   font-size: 2rem;
+}
+.external-link-container {
+  border: 1px solid #010228;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem;
+}
+.external-link-img {
+  width: 18rem;
 }
 #contact {
   background-image: linear-gradient(135deg, #f4f4f4, #b3b2b2);
@@ -8955,6 +8960,17 @@ textarea:hover {
     -webkit-clip-path: none;
   }
 }
+@media (max-width: 56.25rem) {
+  .external-link-container {
+    /* border-left: none; */
+    flex-direction: row;
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+  .external-link-img {
+    width: 15rem;
+  }
+}
 #contact .contact-wrapper {
   margin-top: 3.2rem;
   padding: 0 2rem;
@@ -8962,28 +8978,34 @@ textarea:hover {
 }
 #contact .contact-wrapper__text {
   margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
 }
-#contact .contact-wrapper__text,
-#contact .contact-wrapper a {
+#contact .contact-wrapper a,
+#contact .contact-wrapper__text {
   font-size: 2.4rem;
 }
 @media (max-width: 37.5em) {
-  #contact .contact-wrapper__text,
-  #contact .contact-wrapper a {
+  #contact .contact-wrapper a,
+  #contact .contact-wrapper__text {
     font-size: 2rem;
   }
   .contact-form {
-    display: grid;
-    gap: 1rem;
     grid-template-columns: 1fr;
   }
-
   .contact-form textarea {
     grid-column: span 1;
   }
   .contact-form button {
     grid-column: span 1;
     width: 80%;
+  }
+  .external-link-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .external-link-img {
+    margin: 2rem 0;
   }
 }
 #hero {
@@ -9009,6 +9031,11 @@ canvas {
   position: absolute;
   left: 0;
 }
+/* @media (max-width: 56.25em) {
+  canvas {
+    display: none;
+  }
+} */
 @media (max-width: 37.5em) {
   #hero {
     padding: 0 1.6rem;
@@ -9065,8 +9092,8 @@ canvas {
 #projects {
   background-color: #010228;
   color: #f5f5f5;
-  margin-top: 5rem;
-  z-index: 100;
+  margin-top: -5rem;
+  padding-top: 10rem;
 }
 @media (max-width: 75em) {
   #projects {
