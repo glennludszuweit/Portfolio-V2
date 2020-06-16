@@ -2,12 +2,13 @@
 <div class="emailMsg">{{msg}}</div>
 <div id="top"></div>
 <div id="hero" class="jumbotron">
+  {{!-- <canvas></canvas> --}}
   <div class="container">
     <h1 class="hero-title" class="load-hidden">I'm
       <span class="text-color-main">Glenn Ludszuweit, </span>
       <br>web developer.
     </h1>
-    <p class="hero-cta" class="load-hidden">
+    <p class="hero-cta">
       <a class="cta-btn cta-btn--hero" href="#about">{ ...Discover, Me }</a>
     </p>
   </div>
@@ -42,6 +43,12 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="skill-logo-container">
+      <img src="/assets/webstack.png" alt="Webstack" class="skill-logo">
+      <img src="/assets/react.png" alt="React" class="skill-logo">
+      <img src="/assets/nodejs.png" alt="NodeJS" class="skill-logo">
+      <img src="/assets/mongodb.png" alt="MongoDB" class="skill-logo">
     </div>
   </div>
 </section>
@@ -103,21 +110,22 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text">
-            <h3 class="project-wrapper__text-title">Project Title</h3>
+            <h3 class="project-wrapper__text-title">NewsBlog</h3>
             <div>
               <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi
                 maiores repellendus distinctio aperiam earum dolor voluptatum consequatur blanditiis inventore debitis
                 fuga numquam voluptate ex architecto itaque molestiae.</p>
             </div>
-            <a target="_blank" class="cta-btn cta-btn--hero" href="#!">See Live </a>
-            <a target="_blank" class="cta-btn text-color-main" href="#!">Source Code</a>
+            <a target="_blank" class="cta-btn cta-btn--hero" href="#!">Live Project</a>
+            <a target="_blank" class="cta-btn text-color-main"
+              href="https://github.com/glennludszuweit/MEN-news-blog">Source Code</a>
           </div>
         </div>
         <div class="col-lg-8 col-sm-12">
           <div class="project-wrapper__image">
             <a href="#!" target="_blank">
               <div data-tilt class="thumbnail rounded">
-                <img class="img-fluid" src="/assets/banner.f0a36e228e28e24e4b412f09a4071bac.png">
+                <img class="img-fluid" src="/assets/newsblog-img.jpg">
               </div>
             </a>
           </div>
@@ -127,21 +135,24 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text">
-            <h3 class="project-wrapper__text-title">Project Title</h3>
+            <h3 class="project-wrapper__text-title">DevHub</h3>
             <div>
-              <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi
-                maiores repellendus distinctio aperiam earum dolor voluptatum consequatur blanditiis inventore debitis
-                fuga numquam voluptate ex architecto itaque molestiae.</p>
+              <p class="mb-4">This is an imaginary learning platform where student can join a course. The courses added
+                in this app are video based. The administrator or owner of the app will be able to add courses as this
+                app comes with CRUD frunctionality. Owner will also be able to monitor users and subscribers of the app.
+                For the users, they need to register to be able to join a course, and have full control to thier
+                profiles. Users will have access to a community chat where they can change ideas or ask questions.</p>
             </div>
-            <a target="_blank" class="cta-btn cta-btn--hero" href="#!">See Live </a>
-            <a target="_blank" class="cta-btn text-color-main" href="#!">Source Code</a>
+            <a target="_blank" class="cta-btn cta-btn--hero" href="http://devhub.gnglab.de/">Live Project</a>
+            <a target="_blank" class="cta-btn text-color-main"
+              href="https://github.com/glennludszuweit/MEN-dev-hub">Source Code</a>
           </div>
         </div>
         <div class="col-lg-8 col-sm-12">
           <div class="project-wrapper__image">
-            <a href="#!" target="_blank">
+            <a href="http://devhub.gnglab.de/" target="_blank">
               <div data-tilt class="thumbnail rounded">
-                <img class="img-fluid" src="/assets/banner.f0a36e228e28e24e4b412f09a4071bac.png">
+                <img class="img-fluid" src="/assets/devhub-img.jpg">
               </div>
             </a>
           </div>
@@ -158,13 +169,13 @@
     <h2 class="section-title" style="padding-bottom: 5rem;">Contact</h2>
     <div class="contact-wrapper">
       <div class="contact-wrapper__text">
-        <form class="contact-form" action="/" method="POST">
+        <form class="contact-form" action="/" method="POST" autocomplete="off">
           <input type="text" name="name" placeholder="Name" required />
           <input type="text" name="company" placeholder="Company" required />
           <input type="email" name="email" placeholder="Email" required />
           <input type="text" name="mobile" placeholder="Mobile" required />
           <textarea class="text-area" name="message" rows="6" placeholder="Message" required></textarea>
-          <button href="#" class="cta-btn cta-btn--resume" type="submit">Send</button>
+          <button href="#" class="cta-btn cta-btn--resume" type="submit">Submit</button>
         </form>
       </div>
     </div>
