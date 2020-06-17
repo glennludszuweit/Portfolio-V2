@@ -18,9 +18,13 @@
   },
   "homepage": "https://github.com/glennludszuweit/Portfolio-V1#readme",
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
-    "nodemailer": "^6.4.6"
+    "express-messages": "^1.0.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.5.0",
+    "nodemailer": "^6.4.6",
+    "pug": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"

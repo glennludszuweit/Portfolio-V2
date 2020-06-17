@@ -1,0 +1,164 @@
+extends layouts/main
+
+block content
+
+    #top
+    .emailMsg-container
+      != messages('layouts/messages', locals)
+    #hero.jumbotron
+      canvas
+      .container
+        h1.hero-title
+          | I&apos;m
+          | 
+          span.text-color-main Glenn Ludszuweit, 
+          br
+          | web developer.
+        p.hero-cta
+          a.cta-btn.cta-btn--hero(href="#about") { ...Discover, Me }
+    section#about
+      .container
+        h2.section-title(style="padding-bottom: 5rem;") About me
+        .row.about-wrapper
+          .col-md-6.col-sm-12
+            .about-wrapper__image
+              img.img-fluid.rounded.shadow-lg(height="auto" width="400" src="/assets/profile.jpg" alt="Profile Image")
+          .col-md-6.col-sm-12
+            .about-wrapper__info
+              p.about-wrapper__info-text
+                | Hello there, thank you for the time to visit my portfolio.
+                | Here I have four projects that I have built through the years of learning web development.
+                | Focusing on the Webstack, React, NodeJS and MongoDB.
+              p.about-wrapper__info-text
+                | With the help of these technologies, I showcase here an E-commerce, Social Media, Blog and a Learning platform web applications. 
+              p.about-wrapper__info-text
+                | For more information about me, my background and work experiences, please go ahead and download my CV in the button bellow.
+              p.about-wrapper__info-text
+                | If you are interested to see more of my projects, please visit:
+                |
+                a(href="http://fsprojects.de/" target="_blank") fsprojects.de
+                | 
+                | and
+                | 
+                a(href="http://jsprojects.org/" target="_blank") jsprojects.org
+              p.about-wrapper__info-text
+                | And for services that i offer you can visit: 
+                |
+                a(href="https://gnglab.de/" target="_blank") gnglab.de
+              .d-flex.mt-3.download-cv
+                a.cta-btn.cta-btn--resume(target="_blank" href="https://docs.google.com/document/d/1C3lKCGi62SZ2PJLVJD19U1DjwMUldJoHj-EKLHU4ocE/export?format=pdf")
+                  | Download
+                  | CV
+        .skill-logo-container
+          img.skill-logo(src="/assets/webstack.png" alt="Webstack")
+          img.skill-logo(src="/assets/react.png" alt="React")
+          img.skill-logo(src="/assets/nodejs.png" alt="NodeJS")
+          img.skill-logo(src="/assets/mongodb.png" alt="MongoDB")
+    section#projects
+      .container
+        .project-wrapper
+          h2.section-title.dark-blue-text(style="padding-bottom: 5rem;") Projects
+          .row
+            .col-lg-4.col-sm-12
+              .project-wrapper__text
+                h3.project-wrapper__text-title Workaholics
+                div
+                  p.mb-4
+                    | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi
+                    | maiores repellendus distinctio aperiam earum dolor voluptatum consequatur blanditiis inventore debitis
+                    | fuga numquam voluptate ex architecto itaque molestiae.
+                a.cta-btn.cta-btn--hero(target="_blank" href="http://workaholics.gnglab.de/") See Live 
+                a.cta-btn.text-color-main(target="_blank" href="#!") Source Code
+            .col-lg-8.col-sm-12
+              .project-wrapper__image
+                a(href="http://workaholics.gnglab.de/" target="_blank")
+                  .thumbnail.rounded(data-tilt="")
+                    img.img-fluid(src="/assets/workaholics-img.jpg")
+          .row
+            .col-lg-4.col-sm-12
+              .project-wrapper__text
+                h3.project-wrapper__text-title FlatTops
+                div
+                  p.mb-4
+                    | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi
+                    | maiores repellendus distinctio aperiam earum dolor voluptatum consequatur blanditiis inventore debitis
+                    | fuga numquam voluptate ex architecto itaque molestiae.
+                a.cta-btn.cta-btn--hero(target="_blank" href="http://flattops.gnglab.de/") See Live 
+                a.cta-btn.text-color-main(target="_blank" href="https://github.com/glennludszuweit/React-flat-tops") Source Code
+            .col-lg-8.col-sm-12
+              .project-wrapper__image
+                a(href="http://flattops.gnglab.de/" target="_blank")
+                  .thumbnail.rounded(data-tilt="")
+                    img.img-fluid(src="/assets/flattops-img.jpg")
+          .row
+            .col-lg-4.col-sm-12
+              .project-wrapper__text
+                h3.project-wrapper__text-title NewsBlog
+                div
+                  p.mb-4
+                    | This blogging platform is built around an API. User authentication, a user dashboard to manage contents with CRUD.
+                    | Users can post articles with categories, users can leave comments to posts. 
+                    | There is also user roles, admin can have full control of the contents and users.
+                a.cta-btn.cta-btn--hero(target="_blank" href="http://newsblog.gnglab.de/") Live Project
+                a.cta-btn.text-color-main(target="_blank" href="https://github.com/glennludszuweit/MEN-news-blog") Source Code
+            .col-lg-8.col-sm-12
+              .project-wrapper__image
+                a(href="http://newsblog.gnglab.de/" target="_blank")
+                  .thumbnail.rounded(data-tilt="")
+                    img.img-fluid(src="/assets/newsblog-img.jpg")
+          .row
+            .col-lg-4.col-sm-12
+              .project-wrapper__text
+                h3.project-wrapper__text-title DevHub
+                div
+                  p.mb-4
+                    | This is an imaginary learning platform where student can join a course. The courses added
+                    | in this app are video based. The administrator of the app will be able to add courses, monitor users and subscribers with CRUD frunctionality.
+                    | Users need to register to be able to join a course, have full control to thier
+                    | profiles and access to a community chat.
+                a.cta-btn.cta-btn--hero(target="_blank" href="http://devhub.gnglab.de/") Live Project
+                a.cta-btn.text-color-main(target="_blank" href="https://github.com/glennludszuweit/MEN-dev-hub") Source Code
+            .col-lg-8.col-sm-12
+              .project-wrapper__image
+                a(href="http://devhub.gnglab.de/" target="_blank")
+                  .thumbnail.rounded(data-tilt="")
+                    img.img-fluid(src="/assets/devhub-img.jpg")
+    section#contact
+      .container
+        h2.section-title(style="padding-bottom: 5rem;") Contact
+        .row
+          .col-lg-8.col-sm-12
+            .contact-wrapper
+              .contact-wrapper__text
+                form.contact-form(action="/" method="POST" autocomplete="off")
+                  input(type="text" name="name" placeholder="Name" required="")
+                  input(type="text" name="company" placeholder="Company" required="")
+                  input(type="email" name="email" placeholder="Email" required="")
+                  input(type="text" name="mobile" placeholder="Mobile" required="")
+                  textarea.text-area(name="message" rows="6" placeholder="Message" required="")
+                  button.cta-btn.cta-btn--resume.contact-btn(href="#" type="submit") Submit
+          .col-lg-4.col-sm-12
+            .contact-wrapper
+              .external-link-container
+                a.external-link(href="https://gnglab.de/" target="_blank")
+                  img.external-link-img(src="/assets/gnglab.svg" alt="Gnglab.de logo")
+                a.external-link(href="http://fsprojects.de/" target="_blank")
+                  img.external-link-img(src="/assets/fsprojects.png" alt="fsProjects.org logo")
+                a.external-link(href="http://jsprojects.org/" target="_blank")
+                  img.external-link-img(src="/assets/jsprojects.png" alt="jsProjects.org logo")
+    footer.footer.navbar-static-bottom
+      .container
+        a.back-to-top(href="#top")
+          i.fa.fa-angle-up.fa-2x(aria-hidden="true" style="color: #f5f5f5;")
+        .social-links
+          a(href="https://www.xing.com/profile/GlennHarry_Ludszuweit/cv" target="_blank")
+            i.fa.fa-xing.fa-inverse
+          a(href="https://www.linkedin.com/in/glenn-ludszuweit" target="_blank")
+            i.fa.fa-linkedin.fa-inverse
+          a(href="https://codepen.io/glennludszuweit" target="_blank")
+            i.fa.fa-codepen.fa-inverse
+          a(href="https://github.com/glennludszuweit" target="_blank")
+            i.fa.fa-github.fa-inverse
+        hr
+        p.footer__text
+          a(href="#") Glenn Ludszuweit

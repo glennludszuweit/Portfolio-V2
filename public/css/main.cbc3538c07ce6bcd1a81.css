@@ -8854,6 +8854,7 @@ section {
   height: 100%;
   align-items: center;
   justify-content: center;
+  align-items: flex-start;
 }
 @media (max-width: 56.25em) {
   #about .about-wrapper__image {
@@ -8912,7 +8913,7 @@ textarea {
   border-bottom: 2px solid #010228;
   margin: 1rem;
   color: #010228;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 input:focus,
 textarea:focus {
@@ -8920,23 +8921,26 @@ textarea:focus {
 }
 .contact-form {
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  width: auto;
+  width: 100%;
+  padding: 0;
 }
 .contact-form textarea {
   grid-column: span 2;
 }
 .contact-form button {
   grid-column: span 2;
-  width: 20%;
+  /* width: 20%; */
   justify-self: center;
-  margin-top: 1rem;
-  font-size: 2rem;
+  /* margin-top: 1rem; */
+  font-size: 1.8rem;
+  background: transparent;
 }
 .external-link-container {
-  border: 1px solid #010228;
+  /* border: 1px solid #010228;
+  background: #acaddf; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -8946,6 +8950,7 @@ textarea:focus {
 }
 .external-link-img {
   width: 18rem;
+  padding: 2rem 1rem;
 }
 #contact {
   background-image: linear-gradient(135deg, #f4f4f4, #b3b2b2);
@@ -8962,7 +8967,6 @@ textarea:focus {
 }
 @media (max-width: 56.25rem) {
   .external-link-container {
-    /* border-left: none; */
     flex-direction: row;
     padding: 2rem;
     margin-top: 4rem;
@@ -8971,6 +8975,46 @@ textarea:focus {
     width: 15rem;
   }
 }
+.emailMsg-container {
+  display: flex;
+  justify-content: center;
+}
+.emailMsg-success {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+  color: #fff;
+  background: green;
+  border: 1px solid #000;
+  width: 25rem;
+}
+.emailMsg-danger {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+  color: #fff;
+  background: red;
+  border: 1px solid #000;
+  width: 25rem;
+}
+/* @keyframes emailMsgAnimation {
+  to {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes emailMsgAnimation {
+  to {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+} */
 #contact .contact-wrapper {
   margin-top: 3.2rem;
   padding: 0 2rem;
@@ -9005,7 +9049,7 @@ textarea:focus {
     padding: 1rem;
   }
   .external-link-img {
-    margin: 2rem 0;
+    padding: 1.5rem 0.5rem;
   }
 }
 #hero {
@@ -9031,11 +9075,6 @@ canvas {
   position: absolute;
   left: 0;
 }
-/* @media (max-width: 56.25em) {
-  canvas {
-    display: none;
-  }
-} */
 @media (max-width: 37.5em) {
   #hero {
     padding: 0 1.6rem;

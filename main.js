@@ -1,15 +1,29 @@
 const express = require('express');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const exphbs = require('express-handlebars');
+const session = require('express-session');
+const flash = require('connect-flash');
 
 const app = express();
 const port = process.env.PORT || 9001;
 
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+app.set('view engine', 'pug');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(
+  session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
 
 app.use(
   express.urlencoded({
@@ -62,7 +76,10 @@ app.post('/', (req, res, next) => {
     console.log('Message sent: %s', info.messageId);
     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-    res.render('index', { msg: 'Email Sent!' });
+    // res.render('index', { msg: 'Email Sent!' });
+    // window.alert('Message Sent!');
+    req.flash('success', 'Email sent!');
+    res.redirect('/');
   });
 });
 
